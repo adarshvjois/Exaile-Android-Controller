@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="hello">Hello World, Bluetooth_trialActivity!</string>
+	<string name="app_name">Exaile Controller</string>
+	<string name="title_other_devices">Other Devices</string>
+	<string name="title_paired_devices">Paired Devices</string>
+	<string name="button_scan">Scan</string>
+	<string name="select_device">select a device to connect</string>
+	<string name="none_found">No devices found</string>
+	<string name="none_paired">No devices Paired</string>
+	<string name="scanning">Scanning</string>
+<!-- Player Control -->
+	<string name="control_exaile">EXAILE CONTROL</string>
+	<string name="play">Play/Pause</string>
+	<string name="next">Next</string>
+	<string name="prev">Prev</string>
+	<string name="exit">Exit</string>
+	<string name="pause">Pause</string>
+	<string name="toast_msg">Failed to Connect. Try again or check if plugin is turned on.</string>
+	<string name="vol_up">+</string>
+	<string name="vol_down">-</string>
+	<string name="button_refresh">Refresh</string>
+</resources>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:orientation="vertical"
+  android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_gravity="center" android:gravity="center">
+    <ImageView android:id="@+id/imageView1" android:src="@drawable/mainlogo" android:layout_height="wrap_content" android:layout_width="wrap_content"></ImageView>
+    <TextView android:layout_height="wrap_content" android:textAppearance="?android:attr/textAppearanceLarge" android:id="@+id/PlayerControlTitle" android:text="@string/control_exaile" android:layout_gravity="center" android:gravity="center" android:layout_width="match_parent"></TextView>
+    <Button android:id="@+id/play" android:text="@string/play" android:gravity="center" android:ellipsize="none" android:layout_height="fill_parent" android:layout_weight="0.2" android:layout_width="200dp"></Button>
+    <Button android:id="@+id/next" android:layout_height="wrap_content" android:text="@string/next" android:gravity="center" android:layout_width="200dp"></Button>
+    <Button android:id="@+id/prev" android:layout_height="wrap_content" android:text="@string/prev" android:gravity="center" android:layout_width="200dp"></Button>
+    <ImageSwitcher android:id="@+id/imageSwitcher1" android:layout_width="wrap_content" android:layout_height="wrap_content"></ImageSwitcher>
+    <LinearLayout android:layout_height="wrap_content" android:id="@+id/linearLayout1" android:layout_width="match_parent" android:orientation="horizontal" android:gravity="right" android:clickable="true">
+        <Button android:layout_gravity="left" android:layout_weight="0.5" android:layout_height="fill_parent" android:layout_width="fill_parent" android:id="@+id/volume_up" android:text="@string/vol_up" android:gravity="center" android:layout_marginLeft="30dp" android:layout_marginRight="30dp" android:textSize="30dp"></Button>
+        <Button android:layout_gravity="right" android:layout_weight="0.5" android:layout_height="wrap_content" android:layout_width="match_parent" android:id="@+id/volume_down" android:text="@string/vol_down" android:textSize="30dp" android:layout_marginLeft="30dp" android:layout_marginRight="30dp"></Button>
+    </LinearLayout>
+    <Button android:layout_height="wrap_content" android:layout_width="200dp" android:id="@+id/exit" android:text="@string/exit"></Button>
+           
+</LinearLayout>
