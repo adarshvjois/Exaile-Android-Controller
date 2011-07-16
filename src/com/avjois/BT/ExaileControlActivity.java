@@ -51,8 +51,8 @@ public class ExaileControlActivity extends Activity {
 	    myID=UUID.fromString("a9befec4-af8d-11e0-8272-001f3c68aa23");
 	    dev=mBTadapter.getRemoteDevice(DevName[1]);
 	    try {
-			mbtSock=dev.createRfcommSocketToServiceRecord(myID);
-	    	//mbtSock=dev.createInsecureRfcommSocketToServiceRecord(myID);
+			//mbtSock=dev.createRfcommSocketToServiceRecord(myID);
+	    	mbtSock=dev.createInsecureRfcommSocketToServiceRecord(myID);
 	    	Log.d(TAG,"Connecting...");
 			mbtSock.connect();
 			outs=mbtSock.getOutputStream();
