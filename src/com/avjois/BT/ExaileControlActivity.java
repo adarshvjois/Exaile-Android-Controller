@@ -48,11 +48,11 @@ public class ExaileControlActivity extends Activity {
 	    Log.d("ExaileControlActivity","Device Name string="+DevName[0]+"device address="+DevName[1]);
 	    
 	    mBTadapter=BluetoothAdapter.getDefaultAdapter();
-	    myID=UUID.fromString("00001101-0000-1000-8000-00805F9B34FB");
+	    myID=UUID.fromString("a9befec4-af8d-11e0-8272-001f3c68aa23");
 	    dev=mBTadapter.getRemoteDevice(DevName[1]);
 	    try {
-			//mbtSock=dev.createRfcommSocketToServiceRecord(myID);
-	    	mbtSock=dev.createInsecureRfcommSocketToServiceRecord(myID);
+			mbtSock=dev.createRfcommSocketToServiceRecord(myID);
+	    	//mbtSock=dev.createInsecureRfcommSocketToServiceRecord(myID);
 	    	Log.d(TAG,"Connecting...");
 			mbtSock.connect();
 			outs=mbtSock.getOutputStream();
@@ -60,8 +60,7 @@ public class ExaileControlActivity extends Activity {
 
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			Log.d(TAG,"Fail");
-			e.printStackTrace();
+			Log.d(TAG,"Fail"+e.toString());
 
 
 			Context context = getApplicationContext();
@@ -129,8 +128,7 @@ public class ExaileControlActivity extends Activity {
 		try{
 			outs.write(msg);
 		}catch(IOException e){
-			Log.d(TAG,"Fail at sending the msg..check if connected to device");
-			e.printStackTrace();
+			Log.d(TAG,"Fail at sending the msg..check if connected to device"+e.toString());
 			finish();
 		}
 	}
@@ -142,7 +140,7 @@ public class ExaileControlActivity extends Activity {
 		try{
 			outs.write(msg);
 		}catch(IOException e){
-			Log.d(TAG,"Fail at sending the msg..check if connected to device");
+			Log.d(TAG,"Fail at sending the msg..check if connected to device"+e.toString());
 			e.printStackTrace();
 			finish();
 		}
@@ -155,7 +153,7 @@ public class ExaileControlActivity extends Activity {
 		try{
 			outs.write(msg);
 		}catch(IOException e){
-			Log.d(TAG,"Fail at sending the msg..check if connected to device");
+			Log.d(TAG,"Fail at sending the msg..check if connected to device"+e.toString());
 			e.printStackTrace();
 			finish();
 		}
@@ -168,7 +166,7 @@ public class ExaileControlActivity extends Activity {
 		try{
 			outs.write(msg);
 		}catch(IOException e){
-			Log.d(TAG,"Fail at sending the msg..check if connected to device");
+			Log.d(TAG,"Fail at sending the msg..check if connected to device"+e.toString());
 			e.printStackTrace();
 			finish();
 		}
@@ -180,7 +178,7 @@ public class ExaileControlActivity extends Activity {
 		try{
 			outs.write(msg);
 		}catch(IOException e){
-			Log.d(TAG,"Fail at sending the msg..check if connected to device");
+			Log.d(TAG,"Fail at sending the msg..check if connected to device"+e.toString());
 			e.printStackTrace();
 			finish();
 		}
@@ -195,7 +193,7 @@ public class ExaileControlActivity extends Activity {
 			mbtSock.close();
 			finish();
 		}catch(IOException e){
-			Log.d(TAG,"Fail at sending the msg..check if connected to device");
+			Log.d(TAG,"Fail at sending the msg..check if connected to device"+e.toString());
 			e.printStackTrace();
 			finish();
 		}
